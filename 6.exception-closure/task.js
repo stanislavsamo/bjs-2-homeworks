@@ -1,22 +1,6 @@
-﻿function parseCount(value) {
-	let parsedValue = Number.parseFloat(value);
-	if (Number.isNaN(parsedValue)) {
-		throw new Error('Невалидное значение');
-	}
-	return parsedValue;
-}
-
-function validateCount(value) {
-	try {
-		return parseCount(value);
-	} catch (error) {
-		return error;
-	}
-}
-
-class Triangle {
+﻿class Triangle {
 	constructor(a, b, c) {
-		if (a + b < c || b + c < a || a + c < b) {
+		if (a + b <= c || b + c <= a || a + c <= b) {
 			throw new Error('Треугольник с такими сторонами не существует');
 		}
 		this.a = a;
