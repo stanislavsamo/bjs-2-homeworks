@@ -36,22 +36,18 @@ class Triangle {
   }
   
   function getTriangle(a, b, c) {
-    try {
-      const triangle = new Triangle(a, b, c);
-      return {
-        get perimeter() {
-          return triangle.perimeter;
-        },
-        get area() {
-          return triangle.area;
-        },
-      };
-    } catch (error) {
-      return {
-        area: 'Ошибка! Треугольник не существует',
-        perimeter: 'Ошибка! Треугольник не существует',
-      };
-    }
-  }
+	try {
+		return new Triangle(a, b, c);
+	} catch (error) {
+		return {
+			get area() {
+				return 'Ошибка! Треугольник не существует';
+			},
+			get perimeter() {
+				return 'Ошибка! Треугольник не существует';
+			},
+		};
+	}
+}
 
   
