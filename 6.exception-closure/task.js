@@ -37,7 +37,15 @@ class Triangle {
   
   function getTriangle(a, b, c) {
     try {
-      return new Triangle(a, b, c);
+      const triangle = new Triangle(a, b, c);
+      return {
+        get perimeter() {
+          return triangle.perimeter;
+        },
+        get area() {
+          return triangle.area;
+        },
+      };
     } catch (error) {
       return {
         area: 'Ошибка! Треугольник не существует',
