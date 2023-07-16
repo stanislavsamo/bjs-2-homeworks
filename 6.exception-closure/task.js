@@ -5,3 +5,11 @@
 	}
 	return parsedValue;
 }
+
+function validateCount(value) {
+	try {
+		return parseCount(value);
+	} catch (error) {
+		return error;
+	}
+}
